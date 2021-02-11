@@ -1,0 +1,26 @@
+/* Recipe Blogger FacetWp
+Loaded on FacetWp pages */
+
+/* Facetwp Globals
+---------------------------------------------------------------------------- */
+
+.facetwp-template .fwpl-col {
+	margin-bottom: 10px;
+}
+
+.facetwp-template .fwpl-item {
+	line-height: 20px;
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+.facetwp-template .fwpl-item a {
+	font-family: 'Noto Sans JP', sans-serif;
+	font-size: 16px;
+	font-weight: 500;
+	text-decoration: none;
+}
+
+.facetwp-template .fwpl-item a:hover {
+	text-decoration: none;
+}
