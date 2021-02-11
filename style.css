@@ -149,41 +149,6 @@ html {
 /* Defaults
 ---------------------------------------------------------------------------- */
 
-@font-face {
-    font-family: 'Monologue';
-    src: url('lib/gutenberg/fonts/MonologueScript-Regular.woff2') format('woff2'),
-        url('lib/gutenberg/fonts/MonologueScript-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Freight';
-    src: url('lib/gutenberg/fonts/FreightDispProBook-Regular.woff2') format('woff2'),
-        url('lib/gutenberg/fonts/FreightDispProBook-Regular.woff') format('woff');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Freight';
-    src: url('lib/gutenberg/fonts/FreightBigProLight-Italic.woff2') format('woff2'),
-        url('lib/gutenberg/fonts/FreightBigProLight-Italic.woff') format('woff');
-    font-weight: 300;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Freight';
-    src: url('lib/gutenberg/fonts/FreightBigProLight-Regular.woff2') format('woff2'),
-        url('lib/gutenberg/fonts/FreightBigProLight-Regular.woff') format('woff');
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
-}
 
 /* Typographical Elements
 --------------------------------------------- */
@@ -1247,10 +1212,6 @@ img.alignright,
 	text-decoration: none;
 }
 
-.genesis-nav-menu a {
-	display: inline-block;
-	text-decoration: none
-}
 .genesis-nav-menu a::after {
 	content: '';
 	display: block;
@@ -1319,11 +1280,6 @@ img.alignright,
 	margin: 0;
 }
 
-.genesis-nav-menu > .search input,
-.genesis-nav-menu .widget-area {
-	display: none;
-}
-
 /* Responsive Menu
 --------------------------------------------- */
 
@@ -1340,7 +1296,6 @@ img.alignright,
 .genesis-responsive-menu {
 	display: none;
 	position: relative;
-	text-align: center;
 }
 
 .genesis-responsive-menu .genesis-nav-menu .menu-item:hover > .sub-menu {
@@ -1392,7 +1347,7 @@ img.alignright,
 
 .sub-menu-toggle {
 	float: right;
-	padding: 9px 10px;
+	padding: 15px 10px;
 	position: absolute;
 	right: 0;
 	top: 0;
@@ -1432,25 +1387,13 @@ img.alignright,
 .nav-header-left,
 .nav-header-right {
 	margin-top: 45px;
+	width: 100%;
 }
 
 .nav-header-left a,
 .nav-header-right a {
 	padding: 20px 18px;
 }
-
-.nav-header-left {
-	float: left;
-	text-align: center;
-	width: 35%;
-}
-
-.nav-header-right {
-	float: right;
-	text-align: center;
-	width: 35%;
-}
-
 
 /* Content Area
 ---------------------------------------------------------------------------- */
@@ -1886,22 +1829,26 @@ p.entry-meta,
 		position: relative;
 	}
 
-	.genesis-nav-menu .sub-menu,
-	.genesis-nav-menu .sub-menu a {
-		width: 180px;
-	}
-	
 	.genesis-nav-menu li:after {
 		content: "|";
 		vertical-align: middle;
 		margin-left: 15px;
 		font-size: 10px;
 	}
-		
+
 	.genesis-nav-menu li:last-of-type:after,
 	.genesis-nav-menu ul li:after,
 	.genesis-nav-menu li.last:after {
 		content: none;
+	}
+
+	.genesis-nav-menu a {
+		display: inline-block;
+	}
+
+	.genesis-nav-menu .sub-menu,
+	.genesis-nav-menu .sub-menu a {
+		width: 180px;
 	}
 
 	.genesis-nav-menu .sub-menu {
@@ -1921,11 +1868,6 @@ p.entry-meta,
 
 	.genesis-nav-menu .sub-menu .sub-menu {
 		margin: -44px 0 0 179px;
-	}
-	
-	.genesis-nav-menu > .search input,
-	.genesis-nav-menu .widget-area {
-		display: block;
 	}
 
 	/* Responsive Menu
@@ -1971,6 +1913,21 @@ p.entry-meta,
 
 	.nav-secondary .menu-item {
 		text-align: left;
+	}
+
+	/* ## Header Left & Right Farmhouse
+	--------------------------------------------- */
+
+	.nav-header-left {
+		float: left;
+		text-align: center;
+		width: 35%;
+	}
+
+	.nav-header-right {
+		float: right;
+		text-align: center;
+		width: 35%;
 	}
 
 	/* Site-Inner
