@@ -1,6 +1,10 @@
 <?php
 
-// Speed up the loading of our custom fonts.
+/**
+ * Gets the fonts css files.
+ *
+ * @return array
+ */
 function farmhouse_get_fonts_css() {
 
     $css_prefix  = '/' . str_replace( ABSPATH, '', get_stylesheet_directory() . '/assets/css/' );
@@ -25,7 +29,10 @@ function farmhouse_get_fonts_css() {
 
 }
 
-//add_action( 'wp_head', 'farmhouse_add_font_script', 0 );
+add_action( 'wp_head', 'farmhouse_add_font_script', 0 );
+/**
+ * Add font script.
+ */
 function farmhouse_add_font_script() {
     $suffix = wp_scripts_get_suffix();
     ?>
@@ -38,6 +45,14 @@ function farmhouse_add_font_script() {
     <?php
 }
 
+/**
+ * Localizes the fonts.
+ *
+ * @param string $object_name JavaScript object name.
+ * @param array $l10n JavaScript object to be encoded.
+ *
+ * @return string
+ */
 function farmhouse_localize_script( $object_name, $l10n ) {
     foreach ( (array) $l10n as $key => $value ) {
         if ( ! is_scalar( $value ) ) {
